@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <annotation>
+    <SimBiology xmlns="http://www.mathworks.com">
+      <Version Major="5" Minor="6" Point="0"/>
+    </SimBiology>
+  </annotation>
+  <model id="mw16494f36_9d5a_45b1_aa9e_d9c2424aba63" name="OR">
+    <listOfUnitDefinitions>
+      <unitDefinition id="MWBUILTINPREFIX_pico_MWBUILTINUNIT_mole" name="picomole">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" multiplier="1e-12"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="MWDERIVEDUNIT_1__picomole_second" name="1/(picomole*second)">
+        <listOfUnits>
+          <unit kind="mole" exponent="-1"/>
+          <unit kind="second" exponent="-1"/>
+          <unit kind="dimensionless" multiplier="1000000000000"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="MWDERIVEDUNIT_1__second" name="1/second">
+        <listOfUnits>
+          <unit kind="second" exponent="-1"/>
+          <unit kind="dimensionless" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" name="OR_gate" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="mw0cd3627d_eb80_419b_bbc3_a34a8e2ffca8" name="D1R" compartment="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" initialAmount="0" substanceUnits="MWBUILTINPREFIX_pico_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw43a14f78_e8c4_47eb_ba28_7615f15c6aae" name="D1L&apos;" compartment="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" initialAmount="20" substanceUnits="MWBUILTINPREFIX_pico_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mwcd710ed5_7f44_4bc6_bdf1_c99999379b88" name="S2" compartment="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" initialAmount="20" substanceUnits="MWBUILTINPREFIX_pico_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw36892117_b79d_4bae_bb4f_d3ab70059f37" name="D1&apos;/S2" compartment="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" initialAmount="0" substanceUnits="MWBUILTINPREFIX_pico_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mwb8a7d853_70f0_4b48_b050_8df88f6f0545" name="D1&apos;" compartment="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" initialAmount="0" substanceUnits="MWBUILTINPREFIX_pico_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw1c76a167_ed7c_498c_bc3a_966dda180b1c" name="FAM" compartment="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw68bf6908_04bb_4b93_85f3_db5ad56d4e34" name="D3R" compartment="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" initialAmount="0" substanceUnits="MWBUILTINPREFIX_pico_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw3c3e1951_8f57_48ce_aba0_3a4e628871cf" name="D3&apos;" compartment="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" initialAmount="0" substanceUnits="MWBUILTINPREFIX_pico_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw084d9559_6db3_49f8_8843_278d3d91714c" name="D3L/IN2" compartment="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" initialAmount="20" substanceUnits="MWBUILTINPREFIX_pico_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mwbef06589_664f_413d_9687_e4a0d113f99a" name="D3&apos;/S2" compartment="mwa95f7655_06dc_4e8a_84c5_7a2098d7c7d8" initialAmount="0" substanceUnits="MWBUILTINPREFIX_pico_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="mwb909fb2f_299a_44d4_b148_4e3a97ce6922" name="KOR1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw0cd3627d_eb80_419b_bbc3_a34a8e2ffca8" stoichiometry="1"/>
+          <speciesReference species="mw43a14f78_e8c4_47eb_ba28_7615f15c6aae" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwb8a7d853_70f0_4b48_b050_8df88f6f0545" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwf3b89309_90bb_42fa_85c0_9a03ff2eafb4 </ci>
+              <ci> mw0cd3627d_eb80_419b_bbc3_a34a8e2ffca8 </ci>
+              <ci> mw43a14f78_e8c4_47eb_ba28_7615f15c6aae </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwf3b89309_90bb_42fa_85c0_9a03ff2eafb4" name="kf" value="10" units="MWDERIVEDUNIT_1__picomole_second" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw0116c9a0_f8bb_41a1_af95_c58bc2fbcb89" name="KOR-PN1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwb8a7d853_70f0_4b48_b050_8df88f6f0545" stoichiometry="1"/>
+          <speciesReference species="mwcd710ed5_7f44_4bc6_bdf1_c99999379b88" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw36892117_b79d_4bae_bb4f_d3ab70059f37" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> mw9468ecc7_fb94_4172_aeb6_d05cde3d1d30 </ci>
+                <ci> mwb8a7d853_70f0_4b48_b050_8df88f6f0545 </ci>
+                <ci> mwcd710ed5_7f44_4bc6_bdf1_c99999379b88 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mw707b72fb_db6b_48f4_a9e3_bd94bdb145e0 </ci>
+                <ci> mw36892117_b79d_4bae_bb4f_d3ab70059f37 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw9468ecc7_fb94_4172_aeb6_d05cde3d1d30" name="kf" value="1" units="MWDERIVEDUNIT_1__picomole_second" constant="true"/>
+            <parameter id="mw707b72fb_db6b_48f4_a9e3_bd94bdb145e0" name="kr" value="10" units="MWDERIVEDUNIT_1__second" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwa25e3ffe_ede6_4581_8340_9e43a2392203" name="KOR2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw36892117_b79d_4bae_bb4f_d3ab70059f37" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw1c76a167_ed7c_498c_bc3a_966dda180b1c" stoichiometry="1"/>
+          <speciesReference species="mwb8a7d853_70f0_4b48_b050_8df88f6f0545" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw2a5e816c_e8e8_4367_a4c0_8a8d8335387b </ci>
+              <ci> mw36892117_b79d_4bae_bb4f_d3ab70059f37 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw2a5e816c_e8e8_4367_a4c0_8a8d8335387b" name="kf" value="1" units="MWDERIVEDUNIT_1__second" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwd2b62125_05c8_41c1_b0af_6335fa6f0a89" name="KOR3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw68bf6908_04bb_4b93_85f3_db5ad56d4e34" stoichiometry="1"/>
+          <speciesReference species="mw084d9559_6db3_49f8_8843_278d3d91714c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw3c3e1951_8f57_48ce_aba0_3a4e628871cf" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwb8f6fa9c_dd94_4f5e_9c26_1154bac935da </ci>
+              <ci> mw68bf6908_04bb_4b93_85f3_db5ad56d4e34 </ci>
+              <ci> mw084d9559_6db3_49f8_8843_278d3d91714c </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwb8f6fa9c_dd94_4f5e_9c26_1154bac935da" name="kf" value="1" units="MWDERIVEDUNIT_1__picomole_second" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw105f2ab2_b182_4809_8fcc_7ba6e4e1a5ee" name="KOR-PN2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw3c3e1951_8f57_48ce_aba0_3a4e628871cf" stoichiometry="1"/>
+          <speciesReference species="mwcd710ed5_7f44_4bc6_bdf1_c99999379b88" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwbef06589_664f_413d_9687_e4a0d113f99a" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> mw2686b138_72d5_4d64_bb02_d89ee686a0f6 </ci>
+                <ci> mw3c3e1951_8f57_48ce_aba0_3a4e628871cf </ci>
+                <ci> mwcd710ed5_7f44_4bc6_bdf1_c99999379b88 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mw8b4a7f10_67b4_4190_ab2f_570787b8aa43 </ci>
+                <ci> mwbef06589_664f_413d_9687_e4a0d113f99a </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw2686b138_72d5_4d64_bb02_d89ee686a0f6" name="kf" value="1" units="MWDERIVEDUNIT_1__picomole_second" constant="true"/>
+            <parameter id="mw8b4a7f10_67b4_4190_ab2f_570787b8aa43" name="kr" value="30" units="MWDERIVEDUNIT_1__second" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwd6e645e9_f2c0_4936_9055_59ae57bb4ea2" name="KOR4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwbef06589_664f_413d_9687_e4a0d113f99a" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw1c76a167_ed7c_498c_bc3a_966dda180b1c" stoichiometry="1"/>
+          <speciesReference species="mw3c3e1951_8f57_48ce_aba0_3a4e628871cf" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw56721f61_6093_4f27_9bb0_40123168169a </ci>
+              <ci> mwbef06589_664f_413d_9687_e4a0d113f99a </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw56721f61_6093_4f27_9bb0_40123168169a" name="kf" value="1" units="MWDERIVEDUNIT_1__second" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event id="mw5edd41f3_e93e_4bf5_83c9_95095c5fa872" name="event_1">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <geq/>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+              <cn> 0.2 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="mw0cd3627d_eb80_419b_bbc3_a34a8e2ffca8">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 20 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="mwf63accc6_a56c_4bce_aa59_4e23d09e6847" name="event_2">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <geq/>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+              <cn> 0.2 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="mw68bf6908_04bb_4b93_85f3_db5ad56d4e34">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>
